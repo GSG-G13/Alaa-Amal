@@ -1,6 +1,7 @@
 const taskInput = document.querySelector('#task-input');
 const addBtn = document.querySelector('#add-task');
 const taskList = document.querySelector('#task-list');
+
 function additems() {
     let div = document.createElement("div");
     div.className = "task";
@@ -16,29 +17,40 @@ function additems() {
     div.appendChild(iconDele);
     div.appendChild(iconEdet)
     taskList.appendChild(div)
+    iconDele.addEventListener("click", ()=>{
+        div.remove()
+    })
+    
+    
 }
 
 function addTask() {
-  const taskValue = taskInput.value.trim();
-
-  if (!taskValue) {
+    
+    
+    const taskValue = taskInput.value.trim();
+    
+    if (!taskValue) {
     return;
   }
 
   const task = {
-    id: new Date().getTime(),
-    title: taskValue,
-  };
-
-  let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-
-  tasks.push(task);
-
+      id: new Date().getTime(),
+      title: taskValue,
+    };
+    
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    
+    tasks.push(task);
+    
     localStorage.setItem('tasks', JSON.stringify(tasks));
+    
+    
+    additems();
+    taskInput.value = '';
+    
 
-  
-  additems();
-  taskInput.value = '';
+
+
 }
 
 
