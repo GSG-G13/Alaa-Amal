@@ -126,3 +126,9 @@ clearBtn.addEventListener("click",()=>{
     saveLocal(tasksArr);
     createTaskElements(tasksArr);
 })
+
+
+
+
+
+
