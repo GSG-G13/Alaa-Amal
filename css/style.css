@@ -14,6 +14,7 @@
 }
 
 .container {
+    padding: 30px 20px;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -42,21 +43,17 @@ h1 {
     color: var(--primary-color);
 }
 .add-task-input{
-    margin: 25px 0;
-
-    width: 95%;
+    margin: 15px 0;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     padding: 15px;
     border: 2px solid #eee;
-
     border-radius: 8px;
-    
-
 }
 .add-task-input input{
     background-color: transparent;
-    width: 80%;
+    width: 100%;
     height: 100%;
     outline: none;
     border:0 ;
@@ -79,6 +76,11 @@ h1 {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-left: 15px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 .task{
     width: 100%;
@@ -87,11 +89,11 @@ h1 {
     background-color: #eee;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
     border-radius: 8px;
     margin-bottom:15px ;
-
+    padding: 0 15px;
+    gap: 15px;
 }
 .task button{
     border: none;
@@ -110,13 +112,13 @@ h1 {
 }
 
 p{
-    width: 70%;
+    width: 100%;
     height: 30px;
     background-color: #fff;
     border-radius: 8px;
 }
 .task-list {
-    width: 95%;
+    width: 100%;
 
 }
 
@@ -125,4 +127,20 @@ p{
 }
 .task button#delete-task{
     background-color: var(--deleting-color);
+}
+.clear-div{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+#clear-btn{
+    padding: 9px 23px;
+    border-radius: 8px;
+    outline: none;
+    border: 0px;
+    background: var(--deleting-color);
+    color: var(--white-color);
+    font-size: 15px;
+    margin-bottom: 15px;
+    width: 100%;
 }
