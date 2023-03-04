@@ -144,3 +144,11 @@ p{
     margin-bottom: 15px;
     width: 100%;
 }
+
+
+@media (min-width: 786px) {
+    .container .main-sec{
+        width: 700px;
+    }
+    
+}
